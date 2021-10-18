@@ -24,7 +24,7 @@ class FoodMenu extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: Image.asset(menu[index].menuImage,
-                  fit: BoxFit.cover, height: imgConHeight, width: imgConWidth),
+                  fit: BoxFit.fill, height: imgConHeight, width: imgConWidth),
             ),
           );
         },

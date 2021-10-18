@@ -5,7 +5,7 @@ class MenuItem {
 
 final List<MenuItem> menu = [
   MenuItem(menuImage: 'assets/7.jpg'),
-  MenuItem(menuImage: 'assets/1.jpg'),
+  MenuItem(menuImage: 'assets/macdoland.jpg'),
   MenuItem(menuImage: 'assets/2.jpg'),
   /*MenuItem(menuImage: 'assets/3.jpg'),
   MenuItem(menuImage: 'assets/4.jpg'),

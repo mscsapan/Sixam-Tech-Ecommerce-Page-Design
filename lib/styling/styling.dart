@@ -36,8 +36,26 @@ TextStyle vieAllStyle() {
 TextStyle menuTitleStyle() {
   return GoogleFonts.poppins(
     fontWeight: FontWeight.w500,
-    fontSize: 14.0,
+    fontSize: 16.0,
     color: mHeadingColor,
   );
+  //const TextStyle(fontSize: 12.0, color: Color(0xFF9F9F9F));
+}
+
+TextStyle subTitleStyle() {
+  return GoogleFonts.poppins(
+    fontWeight: FontWeight.w500,
+    fontSize: 12.0,
+    color: mSubTitleColor,
+  );
+  //const TextStyle(fontSize: 12.0, color: Color(0xFF9F9F9F));
+}
+
+TextStyle discountStyle() {
+  return GoogleFonts.poppins(
+      fontWeight: FontWeight.w500,
+      fontSize: 14.0,
+      color: mDiscountColor,
+      decoration: TextDecoration.lineThrough);
   //const TextStyle(fontSize: 12.0, color: Color(0xFF9F9F9F));
 }

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:sixam_tech_assignment/reusable_widgets/all_rest_heading.dart';
+import 'package:sixam_tech_assignment/reusable_widgets/all_restaurant_list.dart';
 import 'package:sixam_tech_assignment/reusable_widgets/app_bar.dart';
+import 'package:sixam_tech_assignment/reusable_widgets/campaign_foods.dart';
 import 'package:sixam_tech_assignment/reusable_widgets/category_item.dart';
 import 'package:sixam_tech_assignment/reusable_widgets/food_menu.dart';
 import 'package:sixam_tech_assignment/reusable_widgets/heading_view.dart';
+import 'package:sixam_tech_assignment/reusable_widgets/popular_food.dart';
+import 'package:sixam_tech_assignment/reusable_widgets/popular_restaurant_list.dart';
 import 'package:sixam_tech_assignment/reusable_widgets/search_text_field.dart';
 
 import 'app_colors/app_colors.dart';
@@ -17,14 +22,17 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
-  final String image =
+  final String image2 =
       'https://www.freepnglogos.com/uploads/burger-png/burger-png-png-images-yellow-images-12.png';
+  final String image =
+      'https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80';
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      //backgroundColor: mBG,
       appBar: appBar(),
       body: SizedBox(
         height: height,
@@ -57,56 +65,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const HeadingView(leftTitle: 'Category'),
-            //const SizedBox(height: 10.0),
             const CategoryItem(),
             const SizedBox(height: 10.0),
             const HeadingView(leftTitle: 'Popular Food Nearby'),
-            SizedBox(
-              width: 220.0,
-              height: 120.0,
-              child: ListView.builder(
-                  itemCount: 10,
-                  scrollDirection: Axis.horizontal,
-                  physics: const ClampingScrollPhysics(),
-                  itemBuilder: (context, index) => Card(
-                        elevation: 3.0,
-                        child: Row(
-                          children: [
-                            ClipRRect(
-                              child: Image.network(image),
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text('Burger'),
-                                const Text('Mc Donald New York USA'),
-                                Row(
-                                  children: List.generate(
-                                      4,
-                                      (index) => const Icon(
-                                            Icons.star,
-                                            size: 20,
-                                            color: Color(0xFFEF7822),
-                                          )),
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Text('\$5'),
-                                        Text('\$10'),
-                                      ],
-                                    ),
-                                    const Icon(Icons.add),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      )),
-            ),
+            const PopularFoodItem(),
+            const SizedBox(height: 10.0),
+            const HeadingView(leftTitle: 'Food Campaign'),
+            const SizedBox(height: 10.0),
+            const CampaignFood(),
+            const SizedBox(height: 10.0),
+            const HeadingView(leftTitle: 'Popular Restaurant'),
+            const PopularRestaurantList(),
+            const SizedBox(height: 10.0),
+            const HeadingView(leftTitle: 'New on App Name'),
+            const PopularRestaurantList(message: 'Free Delivery'),
+            const AllRestHeading(),
+            const AllRestaurantList(),
           ],
         ),
       ),
