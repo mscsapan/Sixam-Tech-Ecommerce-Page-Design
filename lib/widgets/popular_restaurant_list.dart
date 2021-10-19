@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sixam_tech_assignment/app_colors/app_colors.dart';
 import 'package:sixam_tech_assignment/model/popular_restaurant_model.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/discount_message.dart';
+import 'package:sixam_tech_assignment/widgets/discount_message.dart';
 import 'package:sixam_tech_assignment/styling/styling.dart';
 
 import 'favourite.dart';

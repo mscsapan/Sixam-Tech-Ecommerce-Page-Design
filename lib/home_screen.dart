@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/all_rest_heading.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/all_restaurant_list.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/app_bar.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/bottom_app_bar.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/campaign_foods.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/category_item.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/food_menu.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/heading_view.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/new_on_app_name.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/popular_food.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/popular_restaurant_list.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/search_text_field.dart';
+import 'package:sixam_tech_assignment/widgets/all_rest_heading.dart';
+import 'package:sixam_tech_assignment/widgets/all_restaurant_list.dart';
+import 'package:sixam_tech_assignment/widgets/app_bar.dart';
+import 'package:sixam_tech_assignment/widgets/bottom_app_bar.dart';
+import 'package:sixam_tech_assignment/widgets/campaign_foods.dart';
+import 'package:sixam_tech_assignment/widgets/category_item.dart';
+import 'package:sixam_tech_assignment/widgets/food_menu.dart';
+import 'package:sixam_tech_assignment/widgets/heading_view.dart';
+import 'package:sixam_tech_assignment/widgets/new_on_app_name.dart';
+import 'package:sixam_tech_assignment/widgets/popular_food.dart';
+import 'package:sixam_tech_assignment/widgets/popular_restaurant_list.dart';
+import 'package:sixam_tech_assignment/widgets/search_text_field.dart';
 
 import 'app_colors/app_colors.dart';
 import 'model/food_model.dart';
@@ -81,7 +80,6 @@ class _HomeScreenState extends State<HomeScreen> {
             const PopularRestaurantList(),
             const SizedBox(height: 10.0),
             const HeadingView(leftTitle: 'New on App Name'),
-            //const PopularRestaurantList(message: 'Free Delivery'),
             const NewOnAppName(),
             const AllRestHeading(),
             const AllRestaurantList(),
