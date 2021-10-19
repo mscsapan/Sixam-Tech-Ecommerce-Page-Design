@@ -40,6 +40,7 @@ class CampaignFood extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(food.title, style: menuTitleStyle()),
                       Text(food.subTitle, style: subTitleStyle()),

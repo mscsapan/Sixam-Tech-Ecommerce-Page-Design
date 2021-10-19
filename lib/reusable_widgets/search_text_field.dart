@@ -10,10 +10,14 @@ class SearchTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0),
       child: Card(
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         elevation: 7.0,
         child: TextField(
           decoration: InputDecoration(
-            border: const OutlineInputBorder(borderSide: BorderSide.none),
+            border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide.none),
             filled: true,
             fillColor: mBackground,
             hintText: 'Search food or restaurant here',

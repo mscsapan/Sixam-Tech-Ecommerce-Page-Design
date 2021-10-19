@@ -59,3 +59,8 @@ TextStyle discountStyle() {
       decoration: TextDecoration.lineThrough);
   //const TextStyle(fontSize: 12.0, color: Color(0xFF9F9F9F));
 }
+
+TextStyle menuItemStyle() => GoogleFonts.roboto(
+    fontSize: 16.0, color: mHeading, fontWeight: FontWeight.w500);
+TextStyle subMenuItemStyle() => GoogleFonts.roboto(
+    color: mIconColor, fontSize: 15.0, fontWeight: FontWeight.w400);

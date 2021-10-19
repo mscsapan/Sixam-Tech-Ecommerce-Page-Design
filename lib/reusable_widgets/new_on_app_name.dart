@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sixam_tech_assignment/app_colors/app_colors.dart';
+import 'package:sixam_tech_assignment/model/all_restaurant_model.dart';
 import 'package:sixam_tech_assignment/model/popular_restaurant_model.dart';
-import 'package:sixam_tech_assignment/reusable_widgets/discount_message.dart';
 import 'package:sixam_tech_assignment/styling/styling.dart';
 
+import 'discount_message.dart';
 import 'favourite.dart';
 
-class PopularRestaurantList extends StatelessWidget {
-  final String message;
-
-  const PopularRestaurantList({Key? key, this.message = '30% Off'})
-      : super(key: key);
+class NewOnAppName extends StatelessWidget {
+  const NewOnAppName({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class PopularRestaurantList extends StatelessWidget {
       height: 250.0,
       width: 250.0,
       child: ListView.builder(
-        itemCount: restaurant.length,
+        itemCount: newOnApp.length,
         physics: const ClampingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
@@ -41,13 +39,14 @@ class PopularRestaurantList extends StatelessWidget {
                             topLeft: Radius.circular(10.0),
                           ),
                           child: Stack(children: [
-                            Image.network(rest.image,
+                            Image.network(newOnApp[index],
                                 fit: BoxFit.fill, width: 250.0, height: 150.0),
                             index == 0
-                                ? Positioned(
+                                ? const Positioned(
                                     left: 0,
                                     top: 12.0,
-                                    child: DiscountOffer(message: message))
+                                    child:
+                                        DiscountOffer(message: 'Free Delivery'))
                                 : Container(),
                             const Positioned(
                                 top: 8.0, right: 8.0, child: Favourite())

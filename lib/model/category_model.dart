@@ -5,6 +5,7 @@ class CategoryModel {
 }
 
 final List<CategoryModel> category = [
+  CategoryModel(image: 'assets/images/all.png', name: 'All'),
   CategoryModel(image: 'assets/images/soft_drink.png', name: 'Drink'),
   CategoryModel(image: 'assets/images/coffee2.png', name: 'Coffee'),
   CategoryModel(image: 'assets/images/beer.png', name: 'Beer'),

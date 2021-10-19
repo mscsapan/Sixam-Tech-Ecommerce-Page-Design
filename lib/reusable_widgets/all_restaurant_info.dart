@@ -104,7 +104,7 @@ class AllRestaurantInfo extends StatelessWidget {
               height: 14.0,
               color: Color(0xFFE2E2E2),
               //color: Colors.white,
-              thickness: 2.5,
+              thickness: 3.0,
             ),
           ],
         ),

@@ -27,7 +27,25 @@ class AllRestHeading extends StatelessWidget {
               )
             ],
           ),
-          const FaIcon(FontAwesomeIcons.slidersH, color: mHeadingColor)
+          //const FaIcon(FontAwesomeIcons.slidersH, color: mHeadingColor)
+          Theme(
+            data: Theme.of(context).copyWith(
+                dividerTheme: const DividerThemeData(color: Colors.grey)),
+            child: PopupMenuButton<String>(
+              icon:
+                  const FaIcon(FontAwesomeIcons.slidersH, color: mHeadingColor),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              itemBuilder: (context) => [
+                PopupMenuItem(child: Text('All', style: menuItemStyle())),
+                const PopupMenuDivider(height: 4.0),
+                PopupMenuItem(
+                    child: Text('Take Away', style: subMenuItemStyle())),
+                PopupMenuItem(
+                    child: Text('Home Delivery', style: subMenuItemStyle())),
+              ],
+            ),
+          )
         ],
       ),
     );
